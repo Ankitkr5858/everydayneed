@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-purple: #6225E3;
+  --color-pink: #FF3FE0;
+  --color-yellow: #FFD600;
+  --color-lime: #00FF85;
+}
+
+@layer base {
+  body {
+    @apply bg-white font-outfit;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#6225E3] hover:bg-[#5020c0] text-white font-bold px-8 py-4 rounded-full transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-[#FF3FE0] hover:bg-[#e935c7] text-white font-bold px-8 py-4 rounded-full transition-all;
+  }
+
+  .card-hover {
+    @apply hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#6225E3] focus:border-transparent;
+  }
+
+  .form-label {
+    @apply block text-lg font-medium text-gray-900 mb-2;
+  }
+}
